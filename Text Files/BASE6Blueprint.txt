@@ -1,0 +1,98 @@
+PLAYERS AND A GAME MASTER
+LOST OMENS RPG needs any number of players, from two or more. One player takes Game Master (GM) while the others create a legend called a Player Character (PC). The players’ characters are the focus of the story.
+Players make decisions, roll dice, and engage with the story through these characters. Each player has a character sheet to record states, abilities, and essential details.
+Non-player characters (NPCs) act as allies, bystanders, and even adversaries to the PCs. The GM creates and controls these NPCs.
+Let’s explore all this in more depth.
+
+THE GAME MASTER
+One player at the table must be responsible as the GM. The GM portrays NPCs, advance the plot, and decide the chain of events. It’s an important job.
+The GM sets up scenes for characters to explore and help manage interactions. Player character actions shape the game through overcoming challenges and rolling dice. The GM interprets rules, such as deciding the Difficulty of a Test or unusual situations.
+The GM is not an enemy of the player characters. The game works best when the GM fans the player characters and their legends. The GM works to make the characters’ lives as dramatic and exciting as possible.
+
+DICE
+Lost Omens RPG uses six-sided dice, known as d6s, and twelve-sided dice, known as d12s. These dice are to resolve the actions characters may try. Rolling dice usually includes more than one at a time. Dice pools refer to these collective dice.
+Six-sided dice resolve Tests and roll for most tables. Sometimes, twelve-sided dice reflect a more remarkable aptitude for the test or complex tables. Rolls often include two or more d6s and d12s. Having at least five d6s and five d12s for each player is helpful.
+
+REROLLS
+A player may re-roll one or more dice of their choice. The new result replaces the original, even if it is worse. Players may always keep their original result instead of re-rolling.
+
+PAPER AND PENCILS
+Paper and pencils are useful for maps, writing essential things, and tracking moments. You can write notes about temporary effects on your characters, the names of people you meet, essential events, and clues to help you in the game.
+The Game Master may also use paper and pencils to remember details about characters and important game parts.
+You can also use tablets, smartphones, or computers to keep track of everything, but some people might find them distracting.
+
+TOKENS AND PERIPHERALS
+You’ll need tools to track different things in the game. Players need six tokens for Harmony, and the Game Master needs around twelve for Chaos. These are resources in the game. Players might also want extra tokens for Hope, which are unique to each character. You can use chips, coins, beads, counters from other games, or random items.
+
+ 
+BASIC IDEAS
+A few core ideas and a basic primer on the most common mechanics are present throughout the rules.
+
+CHARACTERS
+Each player has a character and is one of the game’s protagonists. These and many Non-player characters (NPCs) the Game Master (GM) controls have common elements. These elements help describe their abilities. 
+
+ATTRIBUTES
+A character’s Attributes stand for a character’s core abilities. They express how capable a character is in specific actions. Each character has three attributes: Body, Mind, and Soul. 
+Each attribute has a rating from 1 – 6. 
+
+APPROACHES
+A character’s Approaches stand for a character’s training and understanding. They express how effective a character is in a specific method of action. Each character has three approaches: Force, Finesse, and Focus. 
+Each approach has a rating from 0 – 4. 
+
+SPECIALITIES
+A character’s Specialties stand for a character’s inclinations and habits. They express how particular a character is in a specific action. Nine specialties exist based on the total possible combinations of Attribute + Approach.
+
+TALENTS
+A character has Talents, which are abilities and traits gained over their life.
+
+SCENES
+The scene is the fundamental unit of any adventure. Shows, movies, and books also encapsulate these continuous sequences of action.
+At the start of a scene, the Game Master (GM) tells the characters where they are, what's happening, and anything else important. The scene usually has a purpose. The characters search for a clue or look for someone based on what happened before.
+
+ACTIVE SCENES
+After the GM describes the scene, the characters can ask questions and decide what to do. They can move around, talk to others involved, and more. Once they finish their actions or have a new goal that takes them somewhere else, the scene ends, and a new one starts. The characters' choices matter. Character actions affect the world, and they have to deal with the results of their decisions.
+TESTS
+Characters have the autonomy to do things when a scene happens. Some actions are easy, and the Game Master (GM) immediately approves them. Others, because of the character's truths or situation, are impossible. But there's a middle ground where things are uncertain.
+In this uncertain area, tests come up to decide if characters succeed or fail. First, a character tells the GM what they want to do. The GM then looks at the situation to see if it's possible or requires a Test.
+The GM gives the player three key details if the action requires a Test. The key details are the relevant Attribute, the Approach, and the Difficulty.
+
+MAKING A TEST
+The GM determines the Difficulty of the Test on a scale of 0 to 5. Most actions a character attempts are within their capabilities with a Difficulty 1. More complicated or risky actions may increase the Difficulty +1 or more. Certain situations or advantages may decrease the Difficulty by 1, to a minimum of 0.
+A character sheet notes the character's Attributes and Approaches. Adding these values together decides how many dice the player rolls. The player gathers the relevant number of d6s. The player may need more dice or even a few d12s depending on character features. 
+They roll the dice and assess each one. Any roll equal to or greater than '6' counts as a success! Any dice that rolls equal to or greater than '10' scores two successes instead of one success. A dice can score no more than two successes. 
+The player sets aside any dice that rolls a Natural 1. They’ll be significant.
+
+SUCCESS OR FAILURE
+The player adds together all the successes they scored. If the total equals or exceeds the Difficulty, they’ve succeeded at the Test.
+Each success beyond the Difficulty earns the player character Harmony. This is a resource to spend and improve the outcome of the Test (explained later). The player may save some or all the Harmony generated to use later.
+If the player scored fewer successes than the difficulty, they’ve failed the Test.
+In any of these cases, the GM describes what happens to the player character. 
+
+COMPLICATIONS
+The GM notes any 1s rolled after describing the outcome. Each '1' is a single Complication. 
+Complications are a problem that occurs during the Test but resolves after it. Complications don't turn a success into a failure. Player characters usually must contend with extra challenges or consequences from Complications. 
+The GM can save the problem for later and generate one point of Chaos instead (explained later).
+
+HARMONY
+Player characters generate Harmony scoring more successes than needed on a Test. Each extra success becomes a single point of Harmony. Player imagination and Game Master (GM) permission are the limits to what Harmony can do.
+
+SPENDING HARMONY
+Spending Harmony allows a player to turn a mere success into glorious triumphs. There are several common ways to spend Harmony.
+	Deal more damage.
+	Alter the scene to capitalize on later.
+	Ask the GM questions about the situation. 
+Unused Harmony after a Test resolve adds to the group's collective pool.
+
+KEEPING HARMONY
+A party can have up to six points of Harmony saved up at any time. 
+When a player character succeeds at a Test, they may spend Harmony from the group pool. Harmony spending can come from the pool with or instead of Harmony generated from a Test.
+Sometimes, the party may not have enough Harmony to achieve its goals. A player character can take risks and generate Chaos instead of spending Harmony. Chaos is the GM's version of Harmony.
+
+CHAOS
+The Game Master (GM) has a resource called Chaos, the counterpart to Harmony. Chaos stands for unknown challenges, perils, and everything that could go wrong. The GM spends Chaos to change things in the current scene.
+The GM also spends Chaos to the advantage of Non-player character (NPC) adversaries. Spending Chaos on adversaries works the same way a player character spends Harmony. The GM instead generates Chaos for their pool when adversaries would generate Harmony. 
+Player characters may generate Chaos when they are out of Harmony and need leverage. The Chaos pool may also grow because of Complications on Tests.
+
+HOPE
+Player characters have access to a personal resource called Hope. Hope stands for the elements that make them stand out. Player characters may spend Hope to upgrade dice in their dice pool or reroll dice that have failed them. Hope also helps characters avoid injuries or other consequences during an action scene.
+Spending Harmony, generating Chaos, or taking a rest all restores spent Hope. When Hope drops to zero, a character becomes hopeless. This can take a few different forms, but they all stand for a problem for the character.
