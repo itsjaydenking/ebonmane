@@ -1,0 +1,166 @@
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%; /* Ensure the html and body take up the full height */
+}
+
+body {
+  font-family: Arial, sans-serif; /* Example font stack */
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure the wrapper takes up the full height of the viewport */
+}
+
+header {
+  background-color: #000; /* Example background color */
+  color: white; /* Example text color */
+  padding: 10px 20px; /* Adjust padding as needed */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure header stays on top of other content */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+}
+
+header h2 {
+  margin-right: 20px; /* Adjust spacing between logo and navigation */
+}
+
+header a {
+  text-decoration: none;
+  color: white; /* Example link color */
+}
+
+button#menu-toggle {
+  display: none; /* Hide by default */
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+button#menu-toggle span {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background-color: white;
+  margin: 5px;
+  transition: transform 0.3s ease;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end; /* Right justify when visible */
+}
+
+nav ul li {
+  margin-right: 20px; /* Adjust spacing between menu items */
+}
+
+nav ul li:last-child {
+  margin-right: 0; /* Remove margin from last item */
+}
+
+nav ul.show {
+  flex-direction: column;
+  position: absolute;
+  top: 60px; /* Adjust top position */
+  right: 0;
+  background-color: #000; /* Example background color */
+  width: 100%;
+}
+
+nav ul.show li {
+  text-align: center;
+  margin: 10px 0;
+}
+
+main {
+  flex: 1; /* Ensure the main content takes up all available space */
+  padding: 20px;
+  margin-top: 80px; /* Match header height to prevent content overlap */
+  max-width: calc(100% - 40px); /* Set maximum width */
+  margin-left: auto; /* Center align the main content */
+  margin-right: auto; /* Center align the main content */
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+main .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+main .text {
+  flex: 1;
+  padding-right: 20px;
+}
+
+main aside {
+  flex: 0 0 300px;
+}
+
+main aside img {
+  width: 100%;
+  height: auto;
+}
+
+footer {
+  background-color: #000; /* Example background color */
+  color: white; /* Example text color */
+  text-align: center;
+  padding: 15px 0;
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  button#menu-toggle {
+    display: block; /* Display the toggle button on smaller screens */
+  }
+
+  nav ul {
+    display: none; /* Hide the navigation list by default on smaller screens */
+  }
+
+  nav ul.show {
+    display: flex; /* Show the navigation list when the menu is toggled */
+    justify-content: flex-start; /* Left justify when dropdown menu is shown */
+  }
+
+  main {
+    padding: 20px; /* Adjust main padding on smaller screens */
+  }
+
+  main .content {
+    flex-direction: column;
+  }
+
+  main aside {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
