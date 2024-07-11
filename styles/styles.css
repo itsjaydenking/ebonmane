@@ -40,6 +40,11 @@ header {
 header nav {
   display: flex;
   align-items: center;
+  position: relative; /* Ensure relative positioning for absolute positioning */
+}
+
+header nav #dark-mode-toggle {
+  margin-left: 20px; /* Adjust spacing between Contact link and dark mode toggle */
 }
 
 header h2 {
@@ -138,6 +143,12 @@ footer {
 }
 
 @media (max-width: 768px) {
+  /* Adjust for smaller screens if necessary */
+  header nav #dark-mode-toggle {
+    margin-left: 0; /* Remove margin for smaller screens if needed */
+    margin-top: 10px; /* Add top margin for separation */
+  }
+
   button#menu-toggle {
     display: block; /* Display the toggle button on smaller screens */
   }
@@ -163,4 +174,30 @@ footer {
     width: 100%;
     margin-top: 20px;
   }
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+header.dark-mode {
+  background-color: #1f1f1f;
+}
+
+header.dark-mode a {
+  color: #e0e0e0;
+}
+
+main.dark-mode {
+  background-color: #121212;
+}
+
+footer.dark-mode {
+  background-color: #1f1f1f;
+}
+
+footer.dark-mode .social-icons a {
+  color: #e0e0e0;
 }
