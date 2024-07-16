@@ -4,25 +4,74 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lost Omens RPG</title>
+    <link rel="stylesheet" href="styles/styles.css" />
   </head>
-  <header>
+  <body>
+    <header>
+      <h1>Lost Omens</h1>
+      <p>Master the Light, Conquer the Shadows, Rewrite Destiny</p>
+      <button id="darkModeToggle">Toggle Dark Mode</button>
+    </header>
     <nav>
-      <h1>Content Options</h1>
       <ul>
-        <li><a href="../index.html">Lion's Den</a></li>
-        <li><a href="lostOmens.html">Home</a></li>
-        <li>Legends and Legacies</li>
-        <li><a href="coreRules.html">Rules</a></li>
-        <li>Character Options</li>
-        <li>Equipment</li>
-        <li>Non-Player Characters</li>
-        <li>Adventures</li>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#setting">Setting</a></li>
+        <li><a href="#lore">Lore and Mythos</a></li>
+        <li><a href="#mechanics">Game Mechanics</a></li>
+        <li><a href="#features">Additional Features</a></li>
+        <li><a href="../index.html">The Lion's Den</a></li>
       </ul>
     </nav>
-  </header>
-  <body>
-    <h2>Project Team</h2>
-    <p>Creator: Jayden King</p>
-    <p>Art Director: Kishara "Kudaichi" Buford</p>
+    <main>
+      <section id="overview">
+        <h2>Overview</h2>
+        <p>
+          The world of Lost Omens is under threat from the Light Eaters,
+          creatures that consume all forms of light and bring about darkness.
+          Knowledge and power are vital, and few can command the formidable
+          forces within this chaotic backdrop. Players are called to reclaim the
+          stolen light and venture into forgotten echoes of a time long past.
+        </p>
+
+        <!-- Overview content goes here -->
+      </section>
+      <section id="setting">
+        <h2>Setting</h2>
+        <!-- Setting content goes here -->
+      </section>
+      <section id="lore">
+        <h2>Lore and Mythos</h2>
+        <!-- Lore content goes here -->
+      </section>
+      <section id="mechanics">
+        <h2>Game Mechanics</h2>
+        <!-- Game Mechanics content goes here -->
+      </section>
+      <section id="features">
+        <h2>Additional Features</h2>
+        <!-- Additional Features content goes here -->
+      </section>
+      <section id="diceRoller">
+        <h3>Dice Roller</h3>
+        <label for="numD6">Number of d6:</label>
+        <input type="number" id="numD6" value="1" min="0" />
+        <label for="numD12">Number of d12:</label>
+        <input type="number" id="numD12" value="1" min="0" />
+        <label for="targetNumber">Target Number:</label>
+        <input type="number" id="targetNumber" value="1" min="1" />
+        <button id="rollButton">Roll</button>
+        <button id="rerollButton">Reroll</button>
+        <button id="resetButton">Reset</button>
+        <div id="diceResults"></div>
+        <p id="successResult"></p>
+        <p id="harmonyResult"></p>
+        <p id="complicationResult"></p>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Jayden King</p>
+    </footer>
+    <script src="scripts/scripts.js"></script>
   </body>
 </html>
