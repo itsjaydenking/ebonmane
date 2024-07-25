@@ -1,4 +1,4 @@
-// scripts.js
+// script.js
 
 document
   .getElementById("darkModeToggle")
