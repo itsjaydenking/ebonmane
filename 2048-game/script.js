@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const width = 4;
   let squares = [];
   let score = 0;
+  let startX, startY, endX, endY;
 
   // Create the playing board
   function createBoard() {
@@ -328,6 +329,8 @@ document.addEventListener("DOMContentLoaded", () => {
       if (squares[i].innerHTML == 2048) {
         setTimeout(() => alert("You win!"), 100);
         document.removeEventListener("keydown", control);
+        document.removeEventListener("touchstart", handleTouchStart);
+        document.removeEventListener("touchend", handleTouchEnd);
       }
     }
   }
@@ -343,6 +346,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (zeros === 0) {
       setTimeout(() => alert("Game Over!"), 100);
       document.removeEventListener("keydown", control);
+      document.removeEventListener("touchstart", handleTouchStart);
+      document.removeEventListener("touchend", handleTouchEnd);
     }
   }
 
@@ -356,6 +361,8 @@ document.addEventListener("DOMContentLoaded", () => {
     squares = [];
     createBoard();
     document.addEventListener("keydown", control);
+    document.addEventListener("touchstart", handleTouchStart);
+    document.addEventListener("touchend", handleTouchEnd);
   }
 
   // Assign functions to keycodes
@@ -375,30 +382,63 @@ document.addEventListener("DOMContentLoaded", () => {
   function keyRight() {
     moveRight();
     combineRowRight();
-    moveRight();
+    moveRightAfterCombine();
     generate();
   }
 
   function keyLeft() {
     moveLeft();
     combineRowLeft();
-    moveLeft();
+    moveLeftAfterCombine();
     generate();
   }
 
   function keyDown() {
     moveDown();
     combineColumnDown();
-    moveDown();
+    moveDownAfterCombine();
     generate();
   }
 
   function keyUp() {
     moveUp();
     combineColumnUp();
-    moveUp();
+    moveUpAfterCombine();
     generate();
   }
+
+  // Touch event handlers for mobile devices
+  function handleTouchStart(e) {
+    startX = e.changedTouches[0].clientX;
+    startY = e.changedTouches[0].clientY;
+  }
+
+  function handleTouchEnd(e) {
+    endX = e.changedTouches[0].clientX;
+    endY = e.changedTouches[0].clientY;
+    handleSwipe();
+  }
+
+  function handleSwipe() {
+    let deltaX = endX - startX;
+    let deltaY = endY - startY;
+    if (Math.abs(deltaX) > Math.abs(deltaY)) {
+      if (deltaX > 0) {
+        keyRight();
+      } else {
+        keyLeft();
+      }
+    } else {
+      if (deltaY > 0) {
+        keyDown();
+      } else {
+        keyUp();
+      }
+    }
+  }
+
+  document.addEventListener("touchstart", handleTouchStart);
+  document.addEventListener("touchend", handleTouchEnd);
 
   createBoard();
 });

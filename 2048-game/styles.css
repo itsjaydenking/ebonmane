@@ -242,6 +242,10 @@ footer.dark-mode {
   background-color: #1f1f1f;
 }
 
+footer.dark-mode .social-icons a {
+  color: #e0e0e0;
+}
+
 .grid-container.dark-mode {
   background-color: #333;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
