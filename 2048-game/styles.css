@@ -1,0 +1,252 @@
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Trebuchet MS", Helvetica, Arial, sans-serif;
+}
+
+/* Flexbox wrapper to ensure footer is sticky */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+body {
+  margin: 0;
+  background-color: #f7e9d0;
+  color: #333;
+}
+
+header {
+  background-color: #262626;
+  color: #e0e0e0;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+}
+
+header h2 {
+  margin-right: 20px;
+}
+
+header a {
+  text-decoration: none;
+  color: #fff0af;
+}
+
+#menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+#menu-toggle span {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background-color: white;
+  margin: 5px;
+  transition: transform 0.3s ease;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+nav ul.show {
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background-color: #262626;
+  width: 100%;
+}
+
+nav ul.show li {
+  text-align: center;
+  margin: 10px 0;
+}
+
+header #dark-mode-toggle {
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  margin-top: 60px;
+}
+
+.game-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 20px;
+}
+
+.score {
+  font-size: 1.5em;
+}
+
+#restart {
+  padding: 10px 20px;
+  background-color: #8e44ad;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+#restart:hover {
+  background-color: #732d91;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: repeat(4, 100px);
+  gap: 10px;
+  background-color: #bbada0;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.tile {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #cdc1b4;
+  font-size: 24px;
+  font-weight: bold;
+  color: #776e65;
+  border-radius: 5px;
+  transition: transform 0.2s ease;
+}
+
+.tile[data-value="2"] {
+  background-color: #eee4da;
+}
+.tile[data-value="4"] {
+  background-color: #ede0c8;
+}
+.tile[data-value="8"] {
+  background-color: #f2b179;
+  color: #f9f6f2;
+}
+.tile[data-value="16"] {
+  background-color: #f59563;
+  color: #f9f6f2;
+}
+.tile[data-value="32"] {
+  background-color: #f67c5f;
+  color: #f9f6f2;
+}
+.tile[data-value="64"] {
+  background-color: #f65e3b;
+  color: #f9f6f2;
+}
+.tile[data-value="128"] {
+  background-color: #edcf72;
+  color: #f9f6f2;
+}
+.tile[data-value="256"] {
+  background-color: #edcc61;
+  color: #f9f6f2;
+}
+.tile[data-value="512"] {
+  background-color: #edc850;
+  color: #f9f6f2;
+}
+.tile[data-value="1024"] {
+  background-color: #edc53f;
+  color: #f9f6f2;
+}
+.tile[data-value="2048"] {
+  background-color: #edc22e;
+  color: #f9f6f2;
+}
+
+footer {
+  background-color: #262626;
+  color: #fff0af;
+  text-align: center;
+  padding: 15px 0;
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+}
+
+header.dark-mode {
+  background-color: #1f1f1f;
+}
+
+header.dark-mode a {
+  color: #e0e0e0;
+}
+
+footer.dark-mode {
+  background-color: #1f1f1f;
+}
+
+.grid-container.dark-mode {
+  background-color: #333;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.tile.dark-mode {
+  color: #fff;
+}
