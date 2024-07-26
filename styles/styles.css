@@ -219,6 +219,7 @@ main.dark-mode {
 
 footer.dark-mode {
   background-color: #1f1f1f;
+  color: #e0e0e0;
 }
 
 footer.dark-mode .social-icons a {

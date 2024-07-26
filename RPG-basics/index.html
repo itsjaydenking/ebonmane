@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Incremental RPG</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <nav>
+          <h2>
+            <img
+              src="../assets/Ebonmane Icon (White) Transparent.png"
+              alt="Ebonmane Logo"
+              width="25px"
+              height="25px"
+            />
+            <a href="../index.html">Ebonmane Ink</a>
+          </h2>
+          <button id="menu-toggle" aria-label="Toggle navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <button id="dark-mode-toggle" aria-label="Toggle dark mode">
+            🌙
+          </button>
+        </nav>
+      </header>
+      <main>
+        <!--The Game Window-->
+        <div id="game-container">
+          <div id="player-stats">
+            <div class="stat">
+              <p>Level: <span id="level">1</span></p>
+            </div>
+            <div class="stat">
+              <p>Experience: <span id="experience">0</span></p>
+            </div>
+            <div class="stat">
+              <p>Exp to Next Level: <span id="exp-to-next-level">100</span></p>
+            </div>
+            <div class="stat">
+              <p>Gold: <span id="gold">0</span></p>
+            </div>
+            <div class="stat">
+              <p>Health: <span id="health">100 / 100 (100%)</span></p>
+              <div class="bar-container">
+                <div id="health-bar" class="bar"></div>
+              </div>
+            </div>
+            <div class="stat">
+              <p>Stamina: <span id="stamina">100 / 100 (100%)</span></p>
+              <div class="bar-container">
+                <div id="stamina-bar" class="bar"></div>
+              </div>
+            </div>
+            <div class="stat">
+              <p>Attack: <span id="attack">20</span></p>
+            </div>
+            <div class="stat">
+              <p id="inventory">Inventory:</p>
+            </div>
+            <div class="stat">
+              <p id="skills">Skills:</p>
+            </div>
+            <div class="stat">
+              <p id="quests">Quests:</p>
+            </div>
+          </div>
+          <div id="controls">
+            <select id="monster-select">
+              <option value="slime">Slime</option>
+              <option value="skeleton">Skeleton</option>
+              <option value="zombie">Zombie</option>
+              <option value="oni">Oni</option>
+              <option value="vampire">Vampire</option>
+              <option value="werewolf">Werewolf</option>
+              <option value="dragon">Dragon</option>
+            </select>
+            <button id="fight-monster">Fight Monster</button>
+            <button id="quest">Accept Quest</button>
+            <button id="turn-in-quest">Turn in Quest</button>
+            <button id="clear-log">Clear Log</button>
+            <button id="buy-health-potion">Buy Health Potion (100 gold)</button>
+            <button id="buy-energy-potion">Buy Energy Potion (100 gold)</button>
+            <button id="save-your-soul" style="display: none">
+              Save Your Soul
+            </button>
+            <button id="slash">Slash</button>
+            <button id="heal">Heal</button>
+          </div>
+          <div id="log"></div>
+        </div>
+      </main>
+      <footer>
+        <div class="social-icons">
+          <a
+            href="https://x.com/itsjaydenking"
+            aria-label="Twitter"
+            target="_blank"
+            ><i class="fab fa-twitter"></i
+          ></a>
+          <a
+            href="https://www.instagram.com/itsjaydenking/"
+            aria-label="Instagram"
+            target="_blank"
+            ><i class="fab fa-instagram"></i
+          ></a>
+        </div>
+        © 2024 by Jayden King - Ebonmane Ink
+      </footer>
+    </div>
+    <script src="scripts.js"></script>
+  </body>
+</html>
