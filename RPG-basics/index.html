@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Incremental RPG</title>
+    <title>Incremental Hero</title>
     <link rel="stylesheet" href="styles.css" />
     <link
       rel="stylesheet"
@@ -36,6 +36,7 @@
       <main>
         <!--The Game Window-->
         <div id="game-container">
+          <h1>Incremental Hero</h1>
           <div id="player-stats">
             <div class="stat">
               <p>Level: <span id="level">1</span></p>
@@ -95,8 +96,10 @@
             </button>
             <button id="slash">Slash</button>
             <button id="heal">Heal</button>
+            <button id="retire" style="display: none">Retire</button>
           </div>
           <div id="log"></div>
+          <div id="champion-count">Champion 0</div>
         </div>
       </main>
       <footer>
@@ -116,6 +119,13 @@
         </div>
         © 2024 by Jayden King - Ebonmane Ink
       </footer>
+      <div id="popup" class="popup">
+        <div class="popup-content">
+          <p id="popup-message"></p>
+          <button id="popup-retire">Retire</button>
+          <button id="popup-remain">Remain</button>
+        </div>
+      </div>
     </div>
     <script src="scripts.js"></script>
   </body>

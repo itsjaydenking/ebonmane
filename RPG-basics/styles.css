@@ -214,6 +214,23 @@ footer.dark-mode {
   color: #e0e0e0;
 }
 
+#player-stats.dark-mode {
+  background: #444;
+  border-color: #555;
+}
+
+.bar-container.dark-mode {
+  background-color: #555;
+}
+
+#health-bar.dark-mode {
+  background-color: #e74c3c;
+}
+
+#stamina-bar.dark-mode {
+  background-color: #3498db;
+}
+
 .monster-name {
   color: #ff4500;
 }
@@ -240,4 +257,43 @@ footer.dark-mode {
 .monsters-defeated,
 .item-name {
   color: #6a5acd;
+}
+
+/* Popup Modal Styles */
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.popup-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+  text-align: center;
+}
+
+#champion-count {
+  text-align: center;
+  margin-top: 20px;
+}
+
+body.dark-mode .popup-content {
+  background-color: #444;
+  color: #e0e0e0;
+}
+
+body.dark-mode .popup-content button {
+  background-color: #333;
+  color: #e0e0e0;
 }

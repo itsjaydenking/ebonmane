@@ -14,6 +14,8 @@ document.addEventListener("DOMContentLoaded", () => {
   let quests = [];
   let activeQuest = null;
   let monstersDefeated = 0;
+  let questLevel = 0; // Track the current quest level
+  let championCount = 0; // Track the number of times the player has retired
   const skills = [
     { name: "Slash", damageMultiplier: [1.1, 1.5], staminaCost: 30 },
     { name: "Heal", healMultiplier: [0.35, 0.65], staminaCost: 40 },
@@ -42,6 +44,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const saveYourSoulButton = document.getElementById("save-your-soul");
   const slashButton = document.getElementById("slash");
   const healButton = document.getElementById("heal");
+  const retireButton = document.getElementById("retire");
+  const championCountElement = document.getElementById("champion-count");
+  const popup = document.getElementById("popup");
+  const popupMessage = document.getElementById("popup-message");
+  const popupRetireButton = document.getElementById("popup-retire");
+  const popupRemainButton = document.getElementById("popup-remain");
 
   fightButton.addEventListener("click", fightMonster);
   questButton.addEventListener("click", acceptQuest);
@@ -52,6 +60,9 @@ document.addEventListener("DOMContentLoaded", () => {
   saveYourSoulButton.addEventListener("click", saveYourSoul);
   slashButton.addEventListener("click", useSlash);
   healButton.addEventListener("click", useHeal);
+  retireButton.addEventListener("click", showRetirePopup);
+  popupRetireButton.addEventListener("click", retire);
+  popupRemainButton.addEventListener("click", remain);
 
   function fightMonster() {
     const selectedMonster = monsterSelect.value;
@@ -196,6 +207,7 @@ document.addEventListener("DOMContentLoaded", () => {
         (quest) => `${quest.name} (Defeat ${quest.amount} ${quest.monster}(s))`
       )
       .join(", ")}`;
+    championCountElement.textContent = `Champion ${championCount}`;
   }
 
   function log(message, type = "") {
@@ -212,29 +224,45 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function getMonsters() {
     return {
-      slime: { name: "Slime", health: 20, damage: 3, exp: 15, gold: 5 },
-      skeleton: { name: "Skeleton", health: 35, damage: 6, exp: 25, gold: 12 },
-      zombie: { name: "Zombie", health: 40, damage: 7, exp: 30, gold: 15 },
-      oni: { name: "Oni", health: 50, damage: 10, exp: 50, gold: 20 },
-      vampire: { name: "Vampire", health: 60, damage: 12, exp: 60, gold: 30 },
-      werewolf: { name: "Werewolf", health: 80, damage: 15, exp: 80, gold: 40 },
-      dragon: { name: "Dragon", health: 100, damage: 20, exp: 100, gold: 50 },
+      slime: { name: "slime", health: 20, damage: 3, exp: 15, gold: 5 },
+      skeleton: { name: "skeleton", health: 35, damage: 6, exp: 25, gold: 12 },
+      zombie: { name: "zombie", health: 40, damage: 7, exp: 30, gold: 15 },
+      oni: { name: "oni", health: 50, damage: 10, exp: 50, gold: 20 },
+      vampire: { name: "vampire", health: 60, damage: 12, exp: 60, gold: 30 },
+      werewolf: { name: "werewolf", health: 80, damage: 15, exp: 80, gold: 40 },
+      dragon: { name: "dragon", health: 100, damage: 20, exp: 100, gold: 50 },
     };
   }
 
   function acceptQuest() {
+    if (activeQuest) {
+      log(
+        "You already have an active quest. Complete it before accepting a new one.",
+        "error"
+      );
+      return;
+    }
+
+    const monsters = Object.keys(getMonsters());
+    const monster = monsters[questLevel % monsters.length];
     const quest = {
-      name: "Monster Hunt",
-      monster: "slime",
+      name: `Monster Hunt ${questLevel + 1}`,
+      monster: monster,
       amount: 3,
       reward: {
         gold: 50,
-        item: { name: "Basic Sword", type: "weapon", damage: 5 },
+        item: {
+          name: `Sword Level ${questLevel + 1}`,
+          type: "weapon",
+          damage: 5 + questLevel,
+        },
       },
     };
+
     quests.push(quest);
     activeQuest = quest;
     monstersDefeated = 0;
+
     log(
       `You accepted the quest: "<span class="quest-name">${quest.name}</span>" - Defeat <span class="quest-amount">${quest.amount}</span> <span class="monster-name">${quest.monster}(s)</span>.`,
       "quest"
@@ -258,10 +286,14 @@ document.addEventListener("DOMContentLoaded", () => {
     monstersDefeated = 0;
     turnInQuestButton.style.display = "none";
 
-    // Increase quest difficulty for the next quest
-    quests = quests.map((q) => ({ ...q, amount: q.amount + 2 }));
+    questLevel++;
 
-    updateStats();
+    const monsters = Object.keys(getMonsters());
+    if (questLevel >= monsters.length) {
+      showEndGamePopup();
+    } else {
+      updateStats();
+    }
   }
 
   function saveYourSoul() {
@@ -427,6 +459,58 @@ document.addEventListener("DOMContentLoaded", () => {
     updateStats();
   }
 
+  function showEndGamePopup() {
+    popupMessage.textContent =
+      "Congratulations Hero! You are the savior of the land and have earned the title of Incremental Champion!";
+    popup.style.display = "block";
+  }
+
+  function showRetirePopup() {
+    popupMessage.textContent =
+      "Take your final bow and enjoy the rest of your life. One day another hero might be needed, but that is for someone else to handle. For now, you are free to adventure.";
+    popup.style.display = "block";
+  }
+
+  function retire() {
+    popup.style.display = "none";
+    championCount++;
+    resetGame();
+    log(
+      "You retired and the game has been reset. Champion count increased.",
+      "success"
+    );
+  }
+
+  function remain() {
+    popup.style.display = "none";
+    retireButton.style.display = "block";
+    log(
+      "You have saved everyone from the Dragons but remain ever vigilant. You could have enjoyed retirement, but you know that danger is just over the horizon. You pick up your sword and continue serving the realm.",
+      "success"
+    );
+  }
+
+  function resetGame() {
+    level = 1;
+    experience = 0;
+    gold = 0;
+    expToNextLevel = 100;
+    health = 100;
+    maxHealth = 100;
+    stamina = 100;
+    maxStamina = 100;
+    attack = 20;
+    inventory = [];
+    equippedWeapon = null;
+    equippedArmor = null;
+    quests = [];
+    activeQuest = null;
+    monstersDefeated = 0;
+    questLevel = 0;
+    retireButton.style.display = "none";
+    updateStats();
+  }
+
   // Example items
   inventory.push({ name: "Sword", type: "weapon", damage: 10 });
   inventory.push({ name: "Shield", type: "armor", health: 20 });
@@ -455,5 +539,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
     header.classList.toggle("dark-mode");
     footer.classList.toggle("dark-mode");
     document.getElementById("game-container").classList.toggle("dark-mode");
+    document.getElementById("player-stats").classList.toggle("dark-mode");
+    document.querySelectorAll(".bar-container").forEach((element) => {
+      element.classList.toggle("dark-mode");
+    });
   });
 });
