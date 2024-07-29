@@ -32,6 +32,18 @@ document.addEventListener("DOMContentLoaded", function () {
       document.getElementById("targetNumber").value
     );
 
+    // Validate input values
+    if (numD6 < 0) numD6 = 0;
+    if (numD6 > 10) numD6 = 10;
+    if (numD12 < 0) numD12 = 0;
+    if (numD12 > 10) numD12 = 10;
+    if (targetNumber < 0) targetNumber = 0;
+    if (targetNumber > 5) targetNumber = 5;
+    if (numD6 + numD12 > 10) {
+      alert("The total number of dice (d6 and d12) cannot exceed 10.");
+      return;
+    }
+
     diceResults = [];
 
     for (let i = 0; i < numD6; i++) {
