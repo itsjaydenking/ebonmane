@@ -1,0 +1,319 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background: #fdf7e1;
+  color: #000000;
+}
+
+header {
+  background: #333;
+  color: #fcc201;
+  padding: 1rem;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+header h1 a {
+  color: #ffeba8;
+  text-decoration: none;
+}
+
+.header-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+#darkModeToggle,
+#menuToggle {
+  background: #fcc201;
+  color: #000;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-weight: 700;
+  margin-right: 4rem;
+}
+
+#menuToggle {
+  display: none;
+}
+
+.subtext {
+  text-align: center;
+  background: #444;
+  color: #ffeba8;
+  padding: 1.25rem 0;
+  margin-top: 2rem; /* Adjust based on header height */
+}
+
+nav {
+  background: #444;
+  padding: 1rem;
+  position: fixed;
+  top: 4rem; /* Adjust based on header height */
+  width: 100%;
+  z-index: 999;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  margin: 0.5rem;
+}
+
+nav ul li a {
+  color: #ffeba8;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+main {
+  padding: 1rem;
+  max-width: 800px;
+  margin: auto;
+  background: #fffef8;
+  margin-top: 7.5rem; /* Adjust based on header and nav height */
+  margin-bottom: 100px; /* Ensure content is not hidden by footer */
+}
+
+section {
+  margin: 2rem 0;
+}
+
+section h2 {
+  color: #333;
+  border-bottom: 2px solid #444;
+  padding-bottom: 0.5rem;
+}
+
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  width: 100%;
+}
+
+aside#diceRoller {
+  position: fixed;
+  right: 0;
+  top: 15rem; /* Adjust based on header and nav height */
+  width: 20px;
+  height: 30px;
+  background: #e6e6e6;
+  padding: 1rem;
+  box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.3);
+  z-index: 998;
+  overflow: hidden;
+  transition: width 0.3s, height 0.3s;
+  opacity: 0.4;
+  outline: thin solid;
+}
+
+aside#diceRoller.expanded {
+  width: 25%;
+  height: 50%;
+  padding: 2rem;
+  opacity: 1;
+  overflow-y: scroll;
+  outline: thin solid;
+}
+
+aside#diceRollerContent {
+  display: none;
+}
+
+aside#diceRoller.expanded #diceRollerContent {
+  display: block;
+}
+
+#diceRollerContent input,
+#diceRollerContent button,
+#diceRollerContent div,
+#diceRollerContent p {
+  display: block;
+  width: auto;
+  margin-bottom: 0.5rem;
+}
+
+#diceRollerContent label {
+  display: block;
+  width: auto;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+#diceRollerContent input,
+#diceRollerContent button {
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+#diceResults {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+#diceResults div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+#diceResults input[type="checkbox"] {
+  margin: 0;
+}
+
+#diceResults div span {
+  display: inline-block;
+}
+
+.dark-mode {
+  background-color: #333;
+  color: #ffffff;
+}
+
+.dark-mode header h1 a {
+  color: #c5c5c5;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add text shadow */
+}
+
+.dark-mode header {
+  color: #696969;
+}
+
+.dark-mode #darkModeToggle,
+.dark-mode #menuToggle {
+  background: #222;
+  color: #c5c5c5;
+}
+
+.dark-mode main {
+  background: #222;
+}
+
+.dark-mode nav {
+  background: #222;
+}
+
+.dark-mode nav ul li a {
+  color: #c5c5c5;
+}
+
+.dark-mode footer {
+  background: #222;
+}
+
+.dark-mode header {
+  background: #333;
+}
+
+.dark-mode #darkModeToggle,
+.dark-mode #menuToggle {
+  background: #777;
+}
+
+.dark-mode aside#diceRoller {
+  background: #222;
+  color: #e0e0e0;
+  box-shadow: -2px 2px 10px rgba(241, 241, 241, 0.6);
+}
+
+.dark-mode button {
+  color: #e0e0e0;
+  background: #333333;
+  border: ridge;
+}
+
+.dark-mode input {
+  color: #e0e0e0;
+  background: #444;
+  border: thin solid;
+}
+
+.dark-mode label {
+  font-weight: 700;
+  color: #e0e0e0;
+}
+
+.dark-mode section h2 {
+  color: #fff; /* Change header color to white */
+  border-bottom: 2px solid #666; /* Adjust border color for contrast */
+  padding-bottom: 0.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add text shadow */
+}
+
+.dark-mode section h3 {
+  color: #ddd; /* Change sub-header color to a lighter shade */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add text shadow */
+}
+
+/* Mobile specific styles */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.2rem;
+  }
+  .header-buttons {
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+  #menuToggle {
+    display: inline-block;
+  }
+  nav {
+    display: none;
+  }
+  nav.open {
+    display: block;
+    top: 5.5rem; /* Adjust based on header height */
+  }
+  aside#diceRoller {
+    top: 12rem;
+    width: 50px;
+    height: 20px;
+    top: auto;
+    bottom: 10px;
+    outline: thin solid;
+    right: -15px;
+  }
+
+  aside#diceRoller.expanded {
+    top: 12rem;
+    width: calc(100% - 20px);
+    height: auto;
+    max-height: 90vh;
+    left: 10px;
+    bottom: 10px;
+    transform: none;
+    padding: 1rem;
+    outline: thin solid;
+  }
+  .subtext {
+    padding: 0.5rem 0;
+    margin-top: 6rem; /* Adjust based on header height */
+  }
+}

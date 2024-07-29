@@ -4,56 +4,133 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lost Omens RPG</title>
-    <link rel="stylesheet" href="styles/style.css" />
-
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header>
-      <h1>Lost Omens</h1>
-      <p>Master the Light, Conquer the Shadows, Rewrite Destiny</p>
-      <button id="darkModeToggle">Toggle Dark Mode</button>
+      <div class="header-content">
+        <h1><a href="index.html">Lost Omens</a></h1>
+        <div class="header-buttons">
+          <button id="darkModeToggle">Toggle Dark Mode</button>
+          <button id="menuToggle">☰</button>
+        </div>
+      </div>
     </header>
-    <nav>
+    <div class="subtext">
+      <p>Master the Light, Conquer the Shadows, Rewrite Destiny.</p>
+    </div>
+    <nav id="mainNav">
       <ul>
-        <li><a href="#overview">Overview</a></li>
-        <li><a href="#setting">Setting</a></li>
-        <li><a href="#lore">Lore and Mythos</a></li>
-        <li><a href="#mechanics">Game Mechanics</a></li>
-        <li><a href="#features">Additional Features</a></li>
-        <li><a href="../index.html">The Lion's Den</a></li>
+        <li><a href="#welcome">Welcome</a></li>
+        <li><a href="#credits">Credits</a></li>
+        <li><a href="#legends">Legends and Legacies</a></li>
+        <li><a href="#core-rules">Core Rules</a></li>
+        <li><a href="#characters">Characters</a></li>
+        <li><a href="#equipment">Equipment</a></li>
+        <li><a href="#grim-forging">Grim Forging</a></li>
+        <li><a href="#npc">Non-Player Characters</a></li>
+        <li><a href="#additional-resources">Additional Resources</a></li>
+        <li>
+          <img
+            src="../assets/Ebonmane Icon (White) Transparent.png"
+            alt=""
+            height="20px"
+            width="20px"
+          /><a href="../index.html">Back to the Lion's Den</a
+          ><img
+            src="../assets/Ebonmane Icon (White) Transparent.png"
+            alt=""
+            height="20px"
+            width="20px"
+          />
+        </li>
       </ul>
     </nav>
     <main>
-      <section id="overview">
-        <h2>Overview</h2>
+      <section id="welcome">
+        <h2>Welcome to Lost Omens</h2>
         <p>
-          The world of Lost Omens is under threat from the Light Eaters,
-          creatures that consume all forms of light and bring about darkness.
-          Knowledge and power are vital, and few can command the formidable
-          forces within this chaotic backdrop. Players are called to reclaim the
-          stolen light and venture into forgotten echoes of a time long past.
+          The world trembles under the shadows of the Light Eaters. They consume
+          all forms of light from the rays of sunshine to the happiness we
+          experience. Knowledge is a currency traded through the language of
+          diplomacy or the art of combat...
         </p>
-
-        <!-- Overview content goes here -->
       </section>
-      <section id="setting">
-        <h2>Setting</h2>
-        <!-- Setting content goes here -->
+      <section id="credits">
+        <h2>Credits</h2>
+        <p>Created by Jayden King</p>
+        <p>Foundational World Building: Jayden King</p>
+        <p>BASE6 Developer: Jayden King</p>
+        <p>Art Director: Kishara “Kudaichi Kish” Buford</p>
+        <h3>Playtesters</h3>
+        <ul>
+          <li>Valrouk (Taryn Hackett)</li>
+          <li>Discount Bard</li>
+          <li>Lizzy Donahue</li>
+          <li>Beth the Bard</li>
+          <li>Will King</li>
+          <li>Dan Wood</li>
+          <li>Lemar Harris</li>
+        </ul>
+        <h3>Community Thanks</h3>
+        <ul>
+          <li>TDsIDEAmachines</li>
+          <li>JS (highgunpriest)</li>
+        </ul>
+        <h3>Special Thanks</h3>
+        <p>
+          Beth the Bard – What words can be said that equal the value you bring
+          to my life.
+        </p>
+        <p>
+          René Beauregard and Daniel Lieberman of DragonRoc RPG Design – You
+          both taught me how to evolve my D&D 5e writing and I find new heights
+          because of that.
+        </p>
       </section>
-      <section id="lore">
-        <h2>Lore and Mythos</h2>
-        <!-- Lore content goes here -->
+      <section id="legends">
+        <h2>Legends and Legacies</h2>
+        <h3>Forged in Light and Shadow</h3>
+        <p>
+          Once Hiraeth was a battleground. Humans lived under the tyranny of
+          dragons, giants, and elementals...
+        </p>
       </section>
-      <section id="mechanics">
-        <h2>Game Mechanics</h2>
-        <!-- Game Mechanics content goes here -->
+      <section id="core-rules">
+        <h2>Core Rules</h2>
+        <h3>The BASE6 Blueprint</h3>
+        <p>This chapter covers the core rules of Lost Omens RPG...</p>
       </section>
-      <section id="features">
-        <h2>Additional Features</h2>
-        <!-- Additional Features content goes here -->
+      <section id="characters">
+        <h2>Characters</h2>
+        <h3>Understanding a Character</h3>
+        <p>A character’s attributes stand for their core abilities...</p>
       </section>
-      <section id="diceRoller">
-        <h3>Dice Roller</h3>
+      <section id="equipment">
+        <h2>Equipment</h2>
+        <h3>Economy and Trade</h3>
+        <p>Information about the economy and trade...</p>
+      </section>
+      <section id="grim-forging">
+        <h2>Grim Forging</h2>
+        <h3>Sigils</h3>
+        <p>Details about Sigils...</p>
+      </section>
+      <section id="npc">
+        <h2>Non-Player Characters</h2>
+        <h3>NPC Types</h3>
+        <p>Different types of NPCs...</p>
+      </section>
+      <section id="additional-resources">
+        <h2>Additional Resources</h2>
+        <h3>Appendix A: Starting Adventure</h3>
+        <p>Details about the starting adventure...</p>
+      </section>
+    </main>
+    <aside id="diceRoller">
+      <button id="diceRollerToggle">🎲</button>
+      <h3>Dice Tray</h3>
+      <div id="diceRollerContent">
         <label for="numD6">Number of d6:</label>
         <input type="number" id="numD6" value="1" min="0" />
         <label for="numD12">Number of d12:</label>
@@ -61,32 +138,29 @@
         <label for="targetNumber">Target Number:</label>
         <input type="number" id="targetNumber" value="1" min="1" />
         <button id="rollButton">Roll</button>
-        <button id="rerollButton">Reroll</button>
-        <button id="resetButton">Reset</button>
-        <div id="diceResults"></div>
-        <p id="successResult"></p>
-        <p id="harmonyResult"></p>
-        <p id="complicationResult"></p>
-      </section>
-    </main>
 
-    <footer>
-      <div class="social-icons">
-        <a
-          href="https://x.com/itsjaydenking"
-          aria-label="Twitter"
-          target="_blank"
-          ><i class="fab fa-twitter" style="color: #ffffff"></i
-        ></a>
-        <a
-          href="https://www.instagram.com/itsjaydenking/"
-          aria-label="Instagram"
-          target="_blank"
-          ><i class="fab fa-instagram" style="color: #ffffff"></i
-        ></a>
+        <button id="resetButton">Reset</button>
+        <hr />
+        <div>
+          <p><b>Dice Results</b></p>
+          <div id="diceResults"></div>
+          <button id="rerollButton">Reroll</button>
+        </div>
+        <hr />
+        <div>
+          <p><b>Dice Outcome</b></p>
+          <p id="successResult"></p>
+          <p id="harmonyResult"></p>
+          <p id="complicationResult"></p>
+        </div>
+        <hr />
+
+        <button id="diceRollerToggle">Close Dice Tray</button>
       </div>
-      © 2024 by Jayden King - Ebonmane Ink
+    </aside>
+    <footer>
+      <p>&copy; 2024 Lost Omens RPG. All rights reserved.</p>
     </footer>
-    <script src="scripts/script.js"></script>
+    <script src="scripts.js"></script>
   </body>
 </html>

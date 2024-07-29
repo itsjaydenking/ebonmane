@@ -1,12 +1,19 @@
-// script.js
-
 document
   .getElementById("darkModeToggle")
   .addEventListener("click", function () {
     document.body.classList.toggle("dark-mode");
   });
 
-// Dice Roller
+document.getElementById("menuToggle").addEventListener("click", function () {
+  document.getElementById("mainNav").classList.toggle("open");
+});
+
+document
+  .getElementById("diceRollerToggle")
+  .addEventListener("click", function () {
+    document.getElementById("diceRoller").classList.toggle("expanded");
+  });
+
 function rollDice(sides) {
   return Math.floor(Math.random() * sides) + 1;
 }
@@ -84,10 +91,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       if (result.value <= targetNumber) {
-        complications++;
-      }
-
-      if (result.value === 1) {
         complications++;
       }
 
